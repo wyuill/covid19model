@@ -1,3 +1,6 @@
+# Description
+This repository is a fork of the Impieral covid19model and applies the methodology used in report 20 introduced in release 4 of the Imperial repo (using google mobility data to predict Rt/infections/deaths) to the UK.
+
 ![](https://github.com/ImperialCollegeLondon/covid19model/workflows/CI/badge.svg)
 
 # covid19model
