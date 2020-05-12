@@ -1,0 +1,605 @@
+Population estimates - local authority based by single year of age,,
+ONS Crown Copyright Reserved [from Nomis on 10 May 2020],,
+,,
+gender,Total,
+age,All Ages,
+,,
+Area,,2018
+uacounty19:Darlington,E06000005,106566.00
+uacounty19:County Durham,E06000047,526980.00
+uacounty19:Hartlepool,E06000001,93242.00
+uacounty19:Middlesbrough,E06000002,140545.00
+uacounty19:Northumberland,E06000057,320274.00
+uacounty19:Redcar and Cleveland,E06000003,136718.00
+uacounty19:Stockton-on-Tees,E06000004,197213.00
+uacounty19:Gateshead,E08000037,202508.00
+uacounty19:Newcastle upon Tyne,E08000021,300196.00
+uacounty19:North Tyneside,E08000022,205985.00
+uacounty19:South Tyneside,E08000023,150265.00
+uacounty19:Sunderland,E08000024,277417.00
+uacounty19:Blackburn with Darwen,E06000008,148942.00
+uacounty19:Blackpool,E06000009,139305.00
+uacounty19:Cheshire East,E06000049,380790.00
+uacounty19:Cheshire West and Chester,E06000050,340502.00
+uacounty19:Halton,E06000006,128432.00
+uacounty19:Warrington,E06000007,209547.00
+uacounty19:Cumbria,E10000006,498888.00
+uacounty19:Bolton,E08000001,285372.00
+uacounty19:Bury,E08000002,190108.00
+uacounty19:Manchester,E08000003,547627.00
+uacounty19:Oldham,E08000004,235623.00
+uacounty19:Rochdale,E08000005,220001.00
+uacounty19:Salford,E08000006,254408.00
+uacounty19:Stockport,E08000007,291775.00
+uacounty19:Tameside,E08000008,225197.00
+uacounty19:Trafford,E08000009,236370.00
+uacounty19:Wigan,E08000010,326088.00
+uacounty19:Lancashire,E10000017,1210053.00
+uacounty19:Knowsley,E08000011,149571.00
+uacounty19:Liverpool,E08000012,494814.00
+uacounty19:Sefton,E08000014,275396.00
+uacounty19:St. Helens,E08000013,180049.00
+uacounty19:Wirral,E08000015,323235.00
+uacounty19:East Riding of Yorkshire,E06000011,339614.00
+"uacounty19:Kingston upon Hull, City of",E06000010,260645.00
+uacounty19:North East Lincolnshire,E06000012,159821.00
+uacounty19:North Lincolnshire,E06000013,172005.00
+uacounty19:York,E06000014,209893.00
+uacounty19:North Yorkshire,E10000023,614505.00
+uacounty19:Barnsley,E08000016,245199.00
+uacounty19:Doncaster,E08000017,310542.00
+uacounty19:Rotherham,E08000018,264671.00
+uacounty19:Sheffield,E08000019,582506.00
+uacounty19:Bradford,E08000032,537173.00
+uacounty19:Calderdale,E08000033,210082.00
+uacounty19:Kirklees,E08000034,438727.00
+uacounty19:Leeds,E08000035,789194.00
+uacounty19:Wakefield,E08000036,345038.00
+uacounty19:Derby,E06000015,257174.00
+uacounty19:Leicester,E06000016,355218.00
+uacounty19:Nottingham,E06000018,331069.00
+uacounty19:Rutland,E06000017,39697.00
+uacounty19:Derbyshire,E10000007,796142.00
+uacounty19:Leicestershire,E10000018,698268.00
+uacounty19:Lincolnshire,E10000019,755833.00
+uacounty19:Northamptonshire,E10000021,747622.00
+uacounty19:Nottinghamshire,E10000024,823126.00
+"uacounty19:Herefordshire, County of",E06000019,192107.00
+uacounty19:Shropshire,E06000051,320274.00
+uacounty19:Stoke-on-Trent,E06000021,255833.00
+uacounty19:Telford and Wrekin,E06000020,177799.00
+uacounty19:Staffordshire,E10000028,875219.00
+uacounty19:Warwickshire,E10000031,571010.00
+uacounty19:Birmingham,E08000025,1141374.00
+uacounty19:Coventry,E08000026,366785.00
+uacounty19:Dudley,E08000027,320626.00
+uacounty19:Sandwell,E08000028,327378.00
+uacounty19:Solihull,E08000029,214909.00
+uacounty19:Walsall,E08000030,283378.00
+uacounty19:Wolverhampton,E08000031,262008.00
+uacounty19:Worcestershire,E10000034,592057.00
+uacounty19:Bedford,E06000055,171623.00
+uacounty19:Central Bedfordshire,E06000056,283606.00
+uacounty19:Luton,E06000032,214109.00
+uacounty19:Peterborough,E06000031,201041.00
+uacounty19:Southend-on-Sea,E06000033,182463.00
+uacounty19:Thurrock,E06000034,172525.00
+uacounty19:Cambridgeshire,E10000003,651482.00
+uacounty19:Essex,E10000012,1477764.00
+uacounty19:Hertfordshire,E10000015,1184365.00
+uacounty19:Norfolk,E10000020,903680.00
+uacounty19:Suffolk,E10000029,758556.00
+uacounty19:Camden,E09000007,262226.00
+uacounty19:City of London,E09000001,8706.00
+uacounty19:Hackney,E09000012,279665.00
+uacounty19:Hammersmith and Fulham,E09000013,185426.00
+uacounty19:Haringey,E09000014,270624.00
+uacounty19:Islington,E09000019,239142.00
+uacounty19:Kensington and Chelsea,E09000020,156197.00
+uacounty19:Lambeth,E09000022,325917.00
+uacounty19:Lewisham,E09000023,303536.00
+uacounty19:Newham,E09000025,352005.00
+uacounty19:Southwark,E09000028,317256.00
+uacounty19:Tower Hamlets,E09000030,317705.00
+uacounty19:Wandsworth,E09000032,326474.00
+uacounty19:Westminster,E09000033,255324.00
+uacounty19:Barking and Dagenham,E09000002,211998.00
+uacounty19:Barnet,E09000003,392140.00
+uacounty19:Bexley,E09000004,247258.00
+uacounty19:Brent,E09000005,330795.00
+uacounty19:Bromley,E09000006,331096.00
+uacounty19:Croydon,E09000008,385346.00
+uacounty19:Ealing,E09000009,341982.00
+uacounty19:Enfield,E09000010,333869.00
+uacounty19:Greenwich,E09000011,286186.00
+uacounty19:Harrow,E09000015,250149.00
+uacounty19:Havering,E09000016,257810.00
+uacounty19:Hillingdon,E09000017,304824.00
+uacounty19:Hounslow,E09000018,270782.00
+uacounty19:Kingston upon Thames,E09000021,175470.00
+uacounty19:Merton,E09000024,206186.00
+uacounty19:Redbridge,E09000026,303858.00
+uacounty19:Richmond upon Thames,E09000027,196904.00
+uacounty19:Sutton,E09000029,204525.00
+uacounty19:Waltham Forest,E09000031,276700.00
+uacounty19:Bracknell Forest,E06000036,121676.00
+uacounty19:Brighton and Hove,E06000043,290395.00
+uacounty19:Isle of Wight,E06000046,141538.00
+uacounty19:Medway,E06000035,277855.00
+uacounty19:Milton Keynes,E06000042,268607.00
+uacounty19:Portsmouth,E06000044,215133.00
+uacounty19:Reading,E06000038,163203.00
+uacounty19:Slough,E06000039,149112.00
+uacounty19:Southampton,E06000045,252796.00
+uacounty19:West Berkshire,E06000037,158527.00
+uacounty19:Windsor and Maidenhead,E06000040,150906.00
+uacounty19:Wokingham,E06000041,167979.00
+uacounty19:Buckinghamshire,E10000002,540059.00
+uacounty19:East Sussex,E10000011,554590.00
+uacounty19:Hampshire,E10000014,1376316.00
+uacounty19:Kent,E10000016,1568623.00
+uacounty19:Oxfordshire,E10000025,687524.00
+uacounty19:Surrey,E10000030,1189934.00
+uacounty19:West Sussex,E10000032,858852.00
+uacounty19:Bath and North East Somerset,E06000022,192106.00
+"uacounty19:Bournemouth, Christchurch and Poole",E06000058,395784.00
+"uacounty19:Bristol, City of",E06000023,463405.00
+uacounty19:Cornwall,E06000052,565968.00
+uacounty19:Isles of Scilly,E06000053,2242.00
+uacounty19:North Somerset,E06000024,213919.00
+uacounty19:Plymouth,E06000026,263100.00
+uacounty19:South Gloucestershire,E06000025,282644.00
+uacounty19:Swindon,E06000030,221996.00
+uacounty19:Torbay,E06000027,135780.00
+uacounty19:Wiltshire,E06000054,498064.00
+uacounty19:Devon,E10000008,795286.00
+uacounty19:Dorset,E06000059,376484.00
+uacounty19:Gloucestershire,E10000013,633558.00
+uacounty19:Somerset,E10000027,559399.00
+uacounty19:Isle of Anglesey,W06000001,69961.00
+uacounty19:Gwynedd,W06000002,124178.00
+uacounty19:Conwy,W06000003,117181.00
+uacounty19:Denbighshire,W06000004,95330.00
+uacounty19:Flintshire,W06000005,155593.00
+uacounty19:Wrexham,W06000006,136126.00
+uacounty19:Powys,W06000023,132447.00
+uacounty19:Ceredigion,W06000008,72992.00
+uacounty19:Pembrokeshire,W06000009,125055.00
+uacounty19:Carmarthenshire,W06000010,187568.00
+uacounty19:Swansea,W06000011,246466.00
+uacounty19:Neath Port Talbot,W06000012,142906.00
+uacounty19:Bridgend,W06000013,144876.00
+uacounty19:Vale of Glamorgan,W06000014,132165.00
+uacounty19:Cardiff,W06000015,364248.00
+uacounty19:Rhondda Cynon Taff,W06000016,240131.00
+uacounty19:Merthyr Tydfil,W06000024,60183.00
+uacounty19:Caerphilly,W06000018,181019.00
+uacounty19:Blaenau Gwent,W06000019,69713.00
+uacounty19:Torfaen,W06000020,93049.00
+uacounty19:Monmouthshire,W06000021,94142.00
+uacounty19:Newport,W06000022,153302.00
+uacounty19:Aberdeen City,S12000033,227560.00
+uacounty19:Aberdeenshire,S12000034,261470.00
+uacounty19:Angus,S12000041,116040.00
+uacounty19:Argyll and Bute,S12000035,86260.00
+uacounty19:Clackmannanshire,S12000005,51400.00
+uacounty19:Dumfries and Galloway,S12000006,148790.00
+uacounty19:Dundee City,S12000042,148750.00
+uacounty19:East Ayrshire,S12000008,121840.00
+uacounty19:East Dunbartonshire,S12000045,108330.00
+uacounty19:East Lothian,S12000010,105790.00
+uacounty19:East Renfrewshire,S12000011,95170.00
+uacounty19:City of Edinburgh,S12000036,518500.00
+uacounty19:Na h-Eileanan Siar,S12000013,26830.00
+uacounty19:Falkirk,S12000014,160340.00
+uacounty19:Fife,S12000047,371910.00
+uacounty19:Glasgow City,S12000049,626410.00
+uacounty19:Highland,S12000017,235540.00
+uacounty19:Inverclyde,S12000018,78150.00
+uacounty19:Midlothian,S12000019,91340.00
+uacounty19:Moray,S12000020,95520.00
+uacounty19:North Ayrshire,S12000021,135280.00
+uacounty19:North Lanarkshire,S12000050,340180.00
+uacounty19:Orkney Islands,S12000023,22190.00
+uacounty19:Perth and Kinross,S12000048,151290.00
+uacounty19:Renfrewshire,S12000038,177790.00
+uacounty19:Scottish Borders,S12000026,115270.00
+uacounty19:Shetland Islands,S12000027,22990.00
+uacounty19:South Ayrshire,S12000028,112550.00
+uacounty19:South Lanarkshire,S12000029,319020.00
+uacounty19:Stirling,S12000030,94330.00
+uacounty19:West Dunbartonshire,S12000039,89130.00
+uacounty19:West Lothian,S12000040,182140.00
+uacounty19:Antrim and Newtownabbey,N09000001,142492.00
+"uacounty19:Armagh City, Banbridge and Craigavon",N09000002,214090.00
+uacounty19:Belfast,N09000003,341877.00
+uacounty19:Causeway Coast and Glens,N09000004,144246.00
+uacounty19:Derry City and Strabane,N09000005,150679.00
+uacounty19:Fermanagh and Omagh,N09000006,116835.00
+uacounty19:Lisburn and Castlereagh,N09000007,144381.00
+uacounty19:Mid and East Antrim,N09000008,138773.00
+uacounty19:Mid Ulster,N09000009,147392.00
+"uacounty19:Newry, Mourne and Down",N09000010,180012.00
+uacounty19:Ards and North Down,N09000011,160864.00
+ualad19:Darlington,E06000005,106566.00
+ualad19:County Durham,E06000047,526980.00
+ualad19:Hartlepool,E06000001,93242.00
+ualad19:Middlesbrough,E06000002,140545.00
+ualad19:Northumberland,E06000057,320274.00
+ualad19:Redcar and Cleveland,E06000003,136718.00
+ualad19:Stockton-on-Tees,E06000004,197213.00
+ualad19:Gateshead,E08000037,202508.00
+ualad19:Newcastle upon Tyne,E08000021,300196.00
+ualad19:North Tyneside,E08000022,205985.00
+ualad19:South Tyneside,E08000023,150265.00
+ualad19:Sunderland,E08000024,277417.00
+ualad19:Blackburn with Darwen,E06000008,148942.00
+ualad19:Blackpool,E06000009,139305.00
+ualad19:Cheshire East,E06000049,380790.00
+ualad19:Cheshire West and Chester,E06000050,340502.00
+ualad19:Halton,E06000006,128432.00
+ualad19:Warrington,E06000007,209547.00
+ualad19:Allerdale,E07000026,97527.00
+ualad19:Barrow-in-Furness,E07000027,67137.00
+ualad19:Carlisle,E07000028,108387.00
+ualad19:Copeland,E07000029,68424.00
+ualad19:Eden,E07000030,52881.00
+ualad19:South Lakeland,E07000031,104532.00
+ualad19:Bolton,E08000001,285372.00
+ualad19:Bury,E08000002,190108.00
+ualad19:Manchester,E08000003,547627.00
+ualad19:Oldham,E08000004,235623.00
+ualad19:Rochdale,E08000005,220001.00
+ualad19:Salford,E08000006,254408.00
+ualad19:Stockport,E08000007,291775.00
+ualad19:Tameside,E08000008,225197.00
+ualad19:Trafford,E08000009,236370.00
+ualad19:Wigan,E08000010,326088.00
+ualad19:Burnley,E07000117,88527.00
+ualad19:Chorley,E07000118,116821.00
+ualad19:Fylde,E07000119,79770.00
+ualad19:Hyndburn,E07000120,80815.00
+ualad19:Lancaster,E07000121,144246.00
+ualad19:Pendle,E07000122,91405.00
+ualad19:Preston,E07000123,141818.00
+ualad19:Ribble Valley,E07000124,60057.00
+ualad19:Rossendale,E07000125,70895.00
+ualad19:South Ribble,E07000126,110527.00
+ualad19:West Lancashire,E07000127,113949.00
+ualad19:Wyre,E07000128,111223.00
+ualad19:Knowsley,E08000011,149571.00
+ualad19:Liverpool,E08000012,494814.00
+ualad19:Sefton,E08000014,275396.00
+ualad19:St. Helens,E08000013,180049.00
+ualad19:Wirral,E08000015,323235.00
+ualad19:East Riding of Yorkshire,E06000011,339614.00
+"ualad19:Kingston upon Hull, City of",E06000010,260645.00
+ualad19:North East Lincolnshire,E06000012,159821.00
+ualad19:North Lincolnshire,E06000013,172005.00
+ualad19:York,E06000014,209893.00
+ualad19:Craven,E07000163,56832.00
+ualad19:Hambleton,E07000164,91134.00
+ualad19:Harrogate,E07000165,160533.00
+ualad19:Richmondshire,E07000166,53244.00
+ualad19:Ryedale,E07000167,54920.00
+ualad19:Scarborough,E07000168,108736.00
+ualad19:Selby,E07000169,89106.00
+ualad19:Barnsley,E08000016,245199.00
+ualad19:Doncaster,E08000017,310542.00
+ualad19:Rotherham,E08000018,264671.00
+ualad19:Sheffield,E08000019,582506.00
+ualad19:Bradford,E08000032,537173.00
+ualad19:Calderdale,E08000033,210082.00
+ualad19:Kirklees,E08000034,438727.00
+ualad19:Leeds,E08000035,789194.00
+ualad19:Wakefield,E08000036,345038.00
+ualad19:Derby,E06000015,257174.00
+ualad19:Leicester,E06000016,355218.00
+ualad19:Nottingham,E06000018,331069.00
+ualad19:Rutland,E06000017,39697.00
+ualad19:Amber Valley,E07000032,126678.00
+ualad19:Bolsover,E07000033,79530.00
+ualad19:Chesterfield,E07000034,104628.00
+ualad19:Derbyshire Dales,E07000035,71977.00
+ualad19:Erewash,E07000036,115490.00
+ualad19:High Peak,E07000037,92221.00
+ualad19:North East Derbyshire,E07000038,101125.00
+ualad19:South Derbyshire,E07000039,104493.00
+ualad19:Blaby,E07000129,100421.00
+ualad19:Charnwood,E07000130,182643.00
+ualad19:Harborough,E07000131,92499.00
+ualad19:Hinckley and Bosworth,E07000132,112423.00
+ualad19:Melton,E07000133,51100.00
+ualad19:North West Leicestershire,E07000134,102126.00
+ualad19:Oadby and Wigston,E07000135,57056.00
+ualad19:Boston,E07000136,69366.00
+ualad19:East Lindsey,E07000137,140741.00
+ualad19:Lincoln,E07000138,99039.00
+ualad19:North Kesteven,E07000139,115985.00
+ualad19:South Holland,E07000140,93980.00
+ualad19:South Kesteven,E07000141,141853.00
+ualad19:West Lindsey,E07000142,94869.00
+ualad19:Corby,E07000150,70827.00
+ualad19:Daventry,E07000151,84484.00
+ualad19:East Northamptonshire,E07000152,93906.00
+ualad19:Kettering,E07000153,101266.00
+ualad19:Northampton,E07000154,225146.00
+ualad19:South Northamptonshire,E07000155,92515.00
+ualad19:Wellingborough,E07000156,79478.00
+ualad19:Ashfield,E07000170,127151.00
+ualad19:Bassetlaw,E07000171,116839.00
+ualad19:Broxtowe,E07000172,113272.00
+ualad19:Gedling,E07000173,117786.00
+ualad19:Mansfield,E07000174,108841.00
+ualad19:Newark and Sherwood,E07000175,121566.00
+ualad19:Rushcliffe,E07000176,117671.00
+"ualad19:Herefordshire, County of",E06000019,192107.00
+ualad19:Shropshire,E06000051,320274.00
+ualad19:Stoke-on-Trent,E06000021,255833.00
+ualad19:Telford and Wrekin,E06000020,177799.00
+ualad19:Cannock Chase,E07000192,100109.00
+ualad19:East Staffordshire,E07000193,118574.00
+ualad19:Lichfield,E07000194,103965.00
+ualad19:Newcastle-under-Lyme,E07000195,129490.00
+ualad19:South Staffordshire,E07000196,112126.00
+ualad19:Stafford,E07000197,135880.00
+ualad19:Staffordshire Moorlands,E07000198,98397.00
+ualad19:Tamworth,E07000199,76678.00
+ualad19:North Warwickshire,E07000218,64850.00
+ualad19:Nuneaton and Bedworth,E07000219,128902.00
+ualad19:Rugby,E07000220,107194.00
+ualad19:Stratford-on-Avon,E07000221,127580.00
+ualad19:Warwick,E07000222,142484.00
+ualad19:Birmingham,E08000025,1141374.00
+ualad19:Coventry,E08000026,366785.00
+ualad19:Dudley,E08000027,320626.00
+ualad19:Sandwell,E08000028,327378.00
+ualad19:Solihull,E08000029,214909.00
+ualad19:Walsall,E08000030,283378.00
+ualad19:Wolverhampton,E08000031,262008.00
+ualad19:Bromsgrove,E07000234,98662.00
+ualad19:Malvern Hills,E07000235,78113.00
+ualad19:Redditch,E07000236,84989.00
+ualad19:Worcester,E07000237,101891.00
+ualad19:Wychavon,E07000238,127340.00
+ualad19:Wyre Forest,E07000239,101062.00
+ualad19:Bedford,E06000055,171623.00
+ualad19:Central Bedfordshire,E06000056,283606.00
+ualad19:Luton,E06000032,214109.00
+ualad19:Peterborough,E06000031,201041.00
+ualad19:Southend-on-Sea,E06000033,182463.00
+ualad19:Thurrock,E06000034,172525.00
+ualad19:Cambridge,E07000008,125758.00
+ualad19:East Cambridgeshire,E07000009,89362.00
+ualad19:Fenland,E07000010,101491.00
+ualad19:Huntingdonshire,E07000011,177352.00
+ualad19:South Cambridgeshire,E07000012,157519.00
+ualad19:Basildon,E07000066,185862.00
+ualad19:Braintree,E07000067,151561.00
+ualad19:Brentwood,E07000068,76550.00
+ualad19:Castle Point,E07000069,90070.00
+ualad19:Chelmsford,E07000070,177079.00
+ualad19:Colchester,E07000071,192523.00
+ualad19:Epping Forest,E07000072,131137.00
+ualad19:Harlow,E07000073,86594.00
+ualad19:Maldon,E07000074,64425.00
+ualad19:Rochford,E07000075,86981.00
+ualad19:Tendring,E07000076,145803.00
+ualad19:Uttlesford,E07000077,89179.00
+ualad19:Broxbourne,E07000095,96876.00
+ualad19:Dacorum,E07000096,154280.00
+ualad19:East Hertfordshire,E07000242,148105.00
+ualad19:Hertsmere,E07000098,104205.00
+ualad19:North Hertfordshire,E07000099,133214.00
+ualad19:St Albans,E07000240,147373.00
+ualad19:Stevenage,E07000243,87754.00
+ualad19:Three Rivers,E07000102,93045.00
+ualad19:Watford,E07000103,96767.00
+ualad19:Welwyn Hatfield,E07000241,122746.00
+ualad19:Breckland,E07000143,139329.00
+ualad19:Broadland,E07000144,129464.00
+ualad19:Great Yarmouth,E07000145,99370.00
+ualad19:King's Lynn and West Norfolk,E07000146,151811.00
+ualad19:North Norfolk,E07000147,104552.00
+ualad19:Norwich,E07000148,141137.00
+ualad19:South Norfolk,E07000149,138017.00
+ualad19:Babergh,E07000200,91401.00
+ualad19:Ipswich,E07000202,137532.00
+ualad19:East Suffolk,E07000244,248249.00
+ualad19:Mid Suffolk,E07000203,102493.00
+ualad19:West Suffolk,E07000245,178881.00
+ualad19:Camden,E09000007,262226.00
+ualad19:City of London,E09000001,8706.00
+ualad19:Hackney,E09000012,279665.00
+ualad19:Hammersmith and Fulham,E09000013,185426.00
+ualad19:Haringey,E09000014,270624.00
+ualad19:Islington,E09000019,239142.00
+ualad19:Kensington and Chelsea,E09000020,156197.00
+ualad19:Lambeth,E09000022,325917.00
+ualad19:Lewisham,E09000023,303536.00
+ualad19:Newham,E09000025,352005.00
+ualad19:Southwark,E09000028,317256.00
+ualad19:Tower Hamlets,E09000030,317705.00
+ualad19:Wandsworth,E09000032,326474.00
+ualad19:Westminster,E09000033,255324.00
+ualad19:Barking and Dagenham,E09000002,211998.00
+ualad19:Barnet,E09000003,392140.00
+ualad19:Bexley,E09000004,247258.00
+ualad19:Brent,E09000005,330795.00
+ualad19:Bromley,E09000006,331096.00
+ualad19:Croydon,E09000008,385346.00
+ualad19:Ealing,E09000009,341982.00
+ualad19:Enfield,E09000010,333869.00
+ualad19:Greenwich,E09000011,286186.00
+ualad19:Harrow,E09000015,250149.00
+ualad19:Havering,E09000016,257810.00
+ualad19:Hillingdon,E09000017,304824.00
+ualad19:Hounslow,E09000018,270782.00
+ualad19:Kingston upon Thames,E09000021,175470.00
+ualad19:Merton,E09000024,206186.00
+ualad19:Redbridge,E09000026,303858.00
+ualad19:Richmond upon Thames,E09000027,196904.00
+ualad19:Sutton,E09000029,204525.00
+ualad19:Waltham Forest,E09000031,276700.00
+ualad19:Bracknell Forest,E06000036,121676.00
+ualad19:Brighton and Hove,E06000043,290395.00
+ualad19:Isle of Wight,E06000046,141538.00
+ualad19:Medway,E06000035,277855.00
+ualad19:Milton Keynes,E06000042,268607.00
+ualad19:Portsmouth,E06000044,215133.00
+ualad19:Reading,E06000038,163203.00
+ualad19:Slough,E06000039,149112.00
+ualad19:Southampton,E06000045,252796.00
+ualad19:West Berkshire,E06000037,158527.00
+ualad19:Windsor and Maidenhead,E06000040,150906.00
+ualad19:Wokingham,E06000041,167979.00
+ualad19:Aylesbury Vale,E07000004,199448.00
+ualad19:Chiltern,E07000005,95927.00
+ualad19:South Bucks,E07000006,70043.00
+ualad19:Wycombe,E07000007,174641.00
+ualad19:Eastbourne,E07000061,103160.00
+ualad19:Hastings,E07000062,92855.00
+ualad19:Lewes,E07000063,102744.00
+ualad19:Rother,E07000064,95656.00
+ualad19:Wealden,E07000065,160175.00
+ualad19:Basingstoke and Deane,E07000084,175729.00
+ualad19:East Hampshire,E07000085,120681.00
+ualad19:Eastleigh,E07000086,131819.00
+ualad19:Fareham,E07000087,116339.00
+ualad19:Gosport,E07000088,85283.00
+ualad19:Hart,E07000089,96293.00
+ualad19:Havant,E07000090,125813.00
+ualad19:New Forest,E07000091,179753.00
+ualad19:Rushmoor,E07000092,95142.00
+ualad19:Test Valley,E07000093,125169.00
+ualad19:Winchester,E07000094,124295.00
+ualad19:Ashford,E07000105,129281.00
+ualad19:Canterbury,E07000106,164553.00
+ualad19:Dartford,E07000107,109709.00
+ualad19:Dover,E07000108,116969.00
+ualad19:Gravesham,E07000109,106385.00
+ualad19:Maidstone,E07000110,169955.00
+ualad19:Sevenoaks,E07000111,120293.00
+ualad19:Folkestone and Hythe,E07000112,112578.00
+ualad19:Swale,E07000113,148519.00
+ualad19:Thanet,E07000114,141819.00
+ualad19:Tonbridge and Malling,E07000115,130508.00
+ualad19:Tunbridge Wells,E07000116,118054.00
+ualad19:Cherwell,E07000177,149161.00
+ualad19:Oxford,E07000178,154327.00
+ualad19:South Oxfordshire,E07000179,140504.00
+ualad19:Vale of White Horse,E07000180,133732.00
+ualad19:West Oxfordshire,E07000181,109800.00
+ualad19:Elmbridge,E07000207,136626.00
+ualad19:Epsom and Ewell,E07000208,79928.00
+ualad19:Guildford,E07000209,147889.00
+ualad19:Mole Valley,E07000210,87253.00
+ualad19:Reigate and Banstead,E07000211,147757.00
+ualad19:Runnymede,E07000212,88000.00
+ualad19:Spelthorne,E07000213,99334.00
+ualad19:Surrey Heath,E07000214,88874.00
+ualad19:Tandridge,E07000215,87496.00
+ualad19:Waverley,E07000216,125610.00
+ualad19:Woking,E07000217,101167.00
+ualad19:Adur,E07000223,63869.00
+ualad19:Arun,E07000224,159827.00
+ualad19:Chichester,E07000225,120750.00
+ualad19:Crawley,E07000226,112448.00
+ualad19:Horsham,E07000227,142217.00
+ualad19:Mid Sussex,E07000228,149716.00
+ualad19:Worthing,E07000229,110025.00
+ualad19:Bath and North East Somerset,E06000022,192106.00
+"ualad19:Bournemouth, Christchurch and Poole",E06000058,395784.00
+"ualad19:Bristol, City of",E06000023,463405.00
+ualad19:Cornwall,E06000052,565968.00
+ualad19:Isles of Scilly,E06000053,2242.00
+ualad19:North Somerset,E06000024,213919.00
+ualad19:Plymouth,E06000026,263100.00
+ualad19:South Gloucestershire,E06000025,282644.00
+ualad19:Swindon,E06000030,221996.00
+ualad19:Torbay,E06000027,135780.00
+ualad19:Wiltshire,E06000054,498064.00
+ualad19:East Devon,E07000040,144317.00
+ualad19:Exeter,E07000041,130428.00
+ualad19:Mid Devon,E07000042,81695.00
+ualad19:North Devon,E07000043,96110.00
+ualad19:South Hams,E07000044,86221.00
+ualad19:Teignbridge,E07000045,132844.00
+ualad19:Torridge,E07000046,68143.00
+ualad19:West Devon,E07000047,55528.00
+ualad19:Dorset,E06000059,376484.00
+ualad19:Cheltenham,E07000078,117090.00
+ualad19:Cotswold,E07000079,89022.00
+ualad19:Forest of Dean,E07000080,86543.00
+ualad19:Gloucester,E07000081,129285.00
+ualad19:Stroud,E07000082,119019.00
+ualad19:Tewkesbury,E07000083,92599.00
+ualad19:Mendip,E07000187,114881.00
+ualad19:Sedgemoor,E07000188,122791.00
+ualad19:South Somerset,E07000189,167861.00
+ualad19:Somerset West and Taunton,E07000246,153866.00
+ualad19:Isle of Anglesey,W06000001,69961.00
+ualad19:Gwynedd,W06000002,124178.00
+ualad19:Conwy,W06000003,117181.00
+ualad19:Denbighshire,W06000004,95330.00
+ualad19:Flintshire,W06000005,155593.00
+ualad19:Wrexham,W06000006,136126.00
+ualad19:Powys,W06000023,132447.00
+ualad19:Ceredigion,W06000008,72992.00
+ualad19:Pembrokeshire,W06000009,125055.00
+ualad19:Carmarthenshire,W06000010,187568.00
+ualad19:Swansea,W06000011,246466.00
+ualad19:Neath Port Talbot,W06000012,142906.00
+ualad19:Bridgend,W06000013,144876.00
+ualad19:Vale of Glamorgan,W06000014,132165.00
+ualad19:Cardiff,W06000015,364248.00
+ualad19:Rhondda Cynon Taff,W06000016,240131.00
+ualad19:Merthyr Tydfil,W06000024,60183.00
+ualad19:Caerphilly,W06000018,181019.00
+ualad19:Blaenau Gwent,W06000019,69713.00
+ualad19:Torfaen,W06000020,93049.00
+ualad19:Monmouthshire,W06000021,94142.00
+ualad19:Newport,W06000022,153302.00
+ualad19:Aberdeen City,S12000033,227560.00
+ualad19:Aberdeenshire,S12000034,261470.00
+ualad19:Angus,S12000041,116040.00
+ualad19:Argyll and Bute,S12000035,86260.00
+ualad19:Clackmannanshire,S12000005,51400.00
+ualad19:Dumfries and Galloway,S12000006,148790.00
+ualad19:Dundee City,S12000042,148750.00
+ualad19:East Ayrshire,S12000008,121840.00
+ualad19:East Dunbartonshire,S12000045,108330.00
+ualad19:East Lothian,S12000010,105790.00
+ualad19:East Renfrewshire,S12000011,95170.00
+ualad19:City of Edinburgh,S12000036,518500.00
+ualad19:Na h-Eileanan Siar,S12000013,26830.00
+ualad19:Falkirk,S12000014,160340.00
+ualad19:Fife,S12000047,371910.00
+ualad19:Glasgow City,S12000049,626410.00
+ualad19:Highland,S12000017,235540.00
+ualad19:Inverclyde,S12000018,78150.00
+ualad19:Midlothian,S12000019,91340.00
+ualad19:Moray,S12000020,95520.00
+ualad19:North Ayrshire,S12000021,135280.00
+ualad19:North Lanarkshire,S12000050,340180.00
+ualad19:Orkney Islands,S12000023,22190.00
+ualad19:Perth and Kinross,S12000048,151290.00
+ualad19:Renfrewshire,S12000038,177790.00
+ualad19:Scottish Borders,S12000026,115270.00
+ualad19:Shetland Islands,S12000027,22990.00
+ualad19:South Ayrshire,S12000028,112550.00
+ualad19:South Lanarkshire,S12000029,319020.00
+ualad19:Stirling,S12000030,94330.00
+ualad19:West Dunbartonshire,S12000039,89130.00
+ualad19:West Lothian,S12000040,182140.00
+ualad19:Antrim and Newtownabbey,N09000001,142492.00
+"ualad19:Armagh City, Banbridge and Craigavon",N09000002,214090.00
+ualad19:Belfast,N09000003,341877.00
+ualad19:Causeway Coast and Glens,N09000004,144246.00
+ualad19:Derry City and Strabane,N09000005,150679.00
+ualad19:Fermanagh and Omagh,N09000006,116835.00
+ualad19:Lisburn and Castlereagh,N09000007,144381.00
+ualad19:Mid and East Antrim,N09000008,138773.00
+ualad19:Mid Ulster,N09000009,147392.00
+"ualad19:Newry, Mourne and Down",N09000010,180012.00
+ualad19:Ards and North Down,N09000011,160864.00

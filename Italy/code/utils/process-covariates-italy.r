@@ -55,7 +55,7 @@ process_covariates <- function(regions, mobility, intervention, d, ifr.by.countr
     d1 <- d1[order(as.Date(d1$DateRep)),]  # ensure date ordering
     
     # padding in raw data backwards ex. portugal
-    date_min <- dmy('31/12/2019') 
+    date_min <- dmy('01/01/2020')
     if (d1$DateRep[1] > date_min){
       print(paste(Country,'In padding ECDC data'))
       pad_days <- d1$DateRep[1] - date_min
@@ -65,11 +65,12 @@ process_covariates <- function(regions, mobility, intervention, d, ifr.by.countr
                                 "Cases" = as.integer(rep(0, pad_days)),
                                 "Deaths" = as.integer(rep(0, pad_days)),
                                 stringsAsFactors=F)
-      
+
       d1 <- bind_rows(padded_data, d1)
     }
-    
+
     # replace NA in mobility data
+    
     mobility1$grocery.pharmacy <- na.locf(mobility1$grocery.pharmacy)
     mobility1$residential <- na.locf(mobility1$residential)
     mobility1$parks <- na.locf(mobility1$parks)
@@ -213,8 +214,7 @@ process_covariates <- function(regions, mobility, intervention, d, ifr.by.countr
   stan_data$P_partial = dim(features_partial)[2]
   if(stan_data$P_partial==0){
     stan_data$X_partial = array(0, dim = c(stan_data$M , stan_data$N2, 1))
-  }
-  else{
+  } else{
     stan_data$X_partial = array(NA, dim = c(stan_data$M , stan_data$N2 ,stan_data$P_partial))
   }
   for (i in 1:stan_data$M){

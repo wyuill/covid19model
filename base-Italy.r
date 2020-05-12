@@ -32,7 +32,7 @@ if(is.null(cmdoptions$options$debug)) {
 } else {
   DEBUG = cmdoptions$options$debug
 }
-# Sys.setenv(FULL = "TRUE") # to run  in full mode
+Sys.setenv(FULL = "TRUE") # to run  in full mode
 if(is.null(cmdoptions$options$full)) {
   FULL = Sys.getenv("FULL") == "TRUE"
 } else {
@@ -70,20 +70,38 @@ cat(sprintf("Running:\nStanModel = %s\nMobility = %s\nInterventions = %s\nFixed 
 
 # Read deaths data for regions
 d <- read_obs_data()
-regions<-unique(as.factor(d$country))
 
 # Read ifr 
 ifr.by.country <- read_ifr_data(unique(d$country))
-ifr.by.country <- ifr.by.country[1:22,]
+#ifr.by.country <- ifr.by.country[1:22,]
 
 # Read google mobility, apple mobility, interventions, stringency
-google_mobility <- read_google_mobility("Italy")
-mobility<-google_mobility[which(google_mobility$country!="Italy"),]
+#google_mobility <- read_google_mobility()
+mobility<-read_google_mobility()
 
 # Read interventions
 interventions <- read_interventions()
-interventions<-interventions[which(interventions$Country!="Italy"),]
+#interventions<-interventions[which(interventions$Country!="Italy"),]
 
+
+# ENSURE ALL AREAS PRESENT FOR ALL VARIABLES
+d <- d %>% filter(country %in% ifr.by.country$country & country %in% mobility$country & 
+                    country %in% interventions$Country)
+
+ifr.by.country <- ifr.by.country %>% filter(country %in% d$country & country %in% mobility$country & 
+                                  country %in% interventions$Country)
+
+mobility <- mobility %>% filter(country %in% ifr.by.country$country & country %in% d$country & 
+                                  country %in% interventions$Country)
+
+interventions <- interventions %>% filter(Country %in% ifr.by.country$country & Country %in% d$country & 
+                                            Country %in% mobility$country)
+
+regions<-unique(as.factor(d$country))
+
+# REMOVE EXTRA MOBILITY DATA
+mobility <- mobility %>%
+  filter(date <= max(d$DateRep))
 
 # Table 1 and top 7
 regions_sum <- d %>% group_by(country) %>% summarise(Deaths=sum(Deaths)) %>%
@@ -95,7 +113,7 @@ regions_sum$deathsPer1000 <- signif(regions_sum$deathsPer1000*1000,2)
 
 top_7 <- regions_sum[1:7,]
 
-forecast <- 7 # increaseto get correct number of days to simulate
+forecast <- 60 # increaseto get correct number of days to simulate
 # Maximum number of days to simulate
 N2 <- (max(d$DateRep) - min(d$DateRep) + 1 + forecast)[[1]]
 
@@ -162,6 +180,18 @@ if (FULL){
   simulate_scenarios(JOBID = JOBID,  StanModel, plots = TRUE, scenario_type = "increase-mob-current", len_forecast = len_forecast,
                      subdir='Italy',
                      simulate_code='Italy/code/stan-models/simulate.stan', mobility_vars=c(1,2,3), 
+                     mobility_increase = 100)
+  simulate_scenarios(JOBID = JOBID,  StanModel, plots = TRUE, scenario_type = "increase-mob-current", len_forecast = len_forecast,
+                     subdir='Italy',
+                     simulate_code='Italy/code/stan-models/simulate.stan', mobility_vars=c(1,2,3), 
+                     mobility_increase = 80)
+  simulate_scenarios(JOBID = JOBID,  StanModel, plots = TRUE, scenario_type = "increase-mob-current", len_forecast = len_forecast,
+                     subdir='Italy',
+                     simulate_code='Italy/code/stan-models/simulate.stan', mobility_vars=c(1,2,3), 
+                     mobility_increase = 60)
+  simulate_scenarios(JOBID = JOBID,  StanModel, plots = TRUE, scenario_type = "increase-mob-current", len_forecast = len_forecast,
+                     subdir='Italy',
+                     simulate_code='Italy/code/stan-models/simulate.stan', mobility_vars=c(1,2,3), 
                      mobility_increase = 40)
   simulate_scenarios(JOBID = JOBID,  StanModel, plots = TRUE, scenario_type = "increase-mob-current", len_forecast = len_forecast,
                      subdir='Italy',
@@ -201,3 +231,4 @@ if (FULL){
                                           last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE, 
                                           mobility_increase = 40,top=9)
 }
+

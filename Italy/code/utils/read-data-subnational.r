@@ -5,7 +5,7 @@ library(tidyverse)
 library(dplyr)
 library(magrittr)
 
-read_obs_data <- function(){
+read_obs_data_italy <- function(){
   # Read the deaths and cases data
   d <- read.csv("Italy/data/dpc-covid19-ita-regioni.csv")
 
@@ -63,7 +63,59 @@ read_obs_data <- function(){
   return(d)
 }
 
-read_ifr_data <- function(regions){
+read_obs_data <- function(){
+  # Read the deaths and cases data
+  cases_raw <- read.csv("Italy/data/uk_cases.csv", stringsAsFactors = FALSE)
+  deaths_raw <- read.csv("Italy/data/uk_deaths.csv", stringsAsFactors = FALSE)
+  deaths_weeks <- read.csv("Italy/data/uk_deaths_Weeks.csv", stringsAsFactors = FALSE)
+  
+  cases_raw$Date <- as.Date(cases_raw$Date, "%d/%m/%y")
+  deaths_weeks$Week.start.date <- as.Date(deaths_weeks$Week.start.date, "%d-%b-%y")
+  
+  areas <- select(cases_raw, Area.code, Area.name) %>% distinct()
+  deaths <- left_join(deaths_raw, deaths_weeks)
+  
+  rand_vect <- function(N, M, sd = 1, pos.only = TRUE) {
+    #adapted from https://stackoverflow.com/questions/24845909/generate-n-random-integers-that-sum-to-m-in-r
+    vec <- rep(1/N, N)
+    if (abs(sum(vec)) < 0.01) vec <- vec + 1
+    vec <- round(vec / sum(vec) * M)
+    deviation <- M - sum(vec)
+    for (. in seq_len(abs(deviation))) {
+      vec[i] <- vec[i <- sample(N, 1)] + sign(deviation)
+    }
+    if (pos.only) while (any(vec < 0)) {
+      negs <- vec < 0
+      pos  <- vec > 0
+      vec[negs][i] <- vec[negs][i <- sample(sum(negs), 1)] + 1
+      vec[pos][i]  <- vec[pos ][i <- sample(sum(pos ), 1)] - 1
+    }
+    vec
+  }
+  
+  d <- data.frame(Date = as.Date(min(deaths$Week.start.date):(max(deaths$Week.start.date)+6), origin="1970-01-01")) %>%
+    crossing(areas) %>%
+    left_join(., deaths, by=c("Date"="Week.start.date", "Area.code"="UTLA19CD")) %>%
+    select(-UTLA19NM) %>%
+    fill("Week.number") %>%
+    replace_na(list(deaths = 0)) %>%
+    group_by(Area.name, Week.number) %>%
+    mutate(deaths_sum = sum(deaths),
+           deaths = rand_vect(n(), max(deaths_sum)))
+           
+  d <- left_join(d, cases_raw) %>%
+    mutate(country = paste(Area.code, "-", Area.name),
+           DateRep = Date,
+           Cases = cases,
+           Deaths = deaths) %>%
+    replace_na(list(Cases = 0)) %>%
+    select(country, DateRep, Cases, Deaths)
+  
+  return(d)
+  
+}
+
+read_ifr_data_italy <- function(regions){
   ifr.Italy.regional <- read.csv("Italy/data/weighted_ifrs_italy.csv")
   colnames(ifr.Italy.regional)[which(colnames(ifr.Italy.regional)=="state")]<-"country"
   colnames(ifr.Italy.regional)[which(colnames(ifr.Italy.regional)=="IFR")]<-"ifr"
@@ -96,7 +148,28 @@ read_ifr_data <- function(regions){
   return(ifr.Italy.regional)
 }
 
-read_google_mobility <- function(Country){
+read_ifr_data <- function(region){
+  
+  ifr <- read.csv("Italy/data/uk_ifr.csv", stringsAsFactors = FALSE)
+  pop <- read.csv("Italy/data/uk_pop.csv", stringsAsFactors = FALSE, skip = 6) %>% select(-1)
+  
+  cases_raw <- read.csv("Italy/data/uk_cases.csv", stringsAsFactors = FALSE)
+  areas <- select(cases_raw, Area.code, Area.name) %>% distinct()
+  
+  ifr.Italy.regional <- left_join(areas, ifr) %>%
+    left_join(., pop, by=c("Area.code"="X")) %>%
+    distinct() %>%
+    mutate(country = paste(Area.code, "-", Area.name),
+           X = row_number(),
+           ifr = ifr,
+           popt = X2018) %>%
+    select(country, X, ifr, popt)
+  
+  return(ifr.Italy.regional)
+  
+}
+
+read_google_mobility_italy <- function(Country){
   google_mobility <- read.csv('Italy/data/Global_Mobility_Report.csv', stringsAsFactors = FALSE)
   google_mobility$date = as.Date(google_mobility$date, format = '%Y-%m-%d')
   google_mobility[, c(6,7,8,9,10,11)] <- google_mobility[, c(6,7,8,9,10,11)]/100
@@ -138,7 +211,45 @@ read_google_mobility <- function(Country){
   return(mobility)
 }
 
-read_interventions <- function(){
+read_google_mobility <- function(){
+  google_mobility <- read.csv('Italy/data/Global_Mobility_Report.csv', stringsAsFactors = FALSE)
+  google_mobility$date = as.Date(google_mobility$date, format = '%Y-%m-%d')
+  google_mobility[, c(6,7,8,9,10,11)] <- google_mobility[, c(6,7,8,9,10,11)]/100
+  google_mobility[, c(6,7,8,9,10)] <- google_mobility[, c(6,7,8,9,10)] * -1
+  google_mobility<-google_mobility[,c(2,3,5,6,7,8,9,10,11)]
+  colnames(google_mobility)[which(colnames(google_mobility)=="country_region")]<-"state"
+  colnames(google_mobility)[which(colnames(google_mobility)=="sub_region_1")]<-"country"
+  colnames(google_mobility)[which(colnames(google_mobility)=="grocery_and_pharmacy_percent_change_from_baseline")]<-"grocery.pharmacy"
+  colnames(google_mobility)[which(colnames(google_mobility)=="parks_percent_change_from_baseline")]<-"parks"
+  colnames(google_mobility)[which(colnames(google_mobility)=="transit_stations_percent_change_from_baseline")]<-"transitstations"
+  colnames(google_mobility)[which(colnames(google_mobility)=="workplaces_percent_change_from_baseline")]<-"workplace"
+  colnames(google_mobility)[which(colnames(google_mobility)=="residential_percent_change_from_baseline")]<-"residential"
+  colnames(google_mobility)[which(colnames(google_mobility)=="retail_and_recreation_percent_change_from_baseline")]<-"retail.recreation"
+  
+  mobility <- google_mobility
+  
+  cases_raw <- read.csv("Italy/data/uk_cases.csv", stringsAsFactors = FALSE)
+  areas <- select(cases_raw, Area.code, Area.name) %>% distinct()
+  
+  mobility <- left_join(areas, mobility, by=c("Area.name"="country")) %>%
+    mutate(country = paste(Area.code, "-", Area.name)) %>%
+    select("country","date","grocery.pharmacy","parks","residential","retail.recreation","transitstations","workplace")
+  
+  # remove areas with nas - May not need this as real issue is covariate_list is different lengths per area
+  # Not needed - see mobility1<-na.locf(mobility1) in process-covariates_italy.r
+  area_without_na <- mobility %>%
+    group_by(country) %>%
+    summarise_all(~sum(is.na(.))) %>%
+    transmute(country, sumNA = rowSums(.[-1])) %>%
+    filter(sumNA == 0)
+  
+  mobility <- mobility %>%
+    filter(country %in% area_without_na$country)
+  
+  return(mobility)
+}
+
+read_interventions_italy <- function(){
   covariates<-read.csv("Italy/data/Italy_events.csv")
   covariates=covariates[c(1:105),c(1:5)]
   
@@ -185,4 +296,22 @@ read_interventions <- function(){
   
   covariates <- covariates %>% select("Country","schools_universities","public_events","lockdown","social_distancing_encouraged","self_isolating_if_ill")
   return(covariates)
+}
+
+read_interventions <- function(){
+  covariates <- read.csv("Italy/data/uk_interventions.csv")
+  
+  cases_raw <- read.csv("Italy/data/uk_cases.csv", stringsAsFactors = FALSE)
+  covariates <- select(cases_raw, Area.code, Area.name) %>%
+    distinct() %>%
+    crossing(covariates) %>%
+    mutate(Country = paste(Area.code, "-", Area.name),
+           schools_universities = as.Date(schools_universities, "%d/%m/%y"),
+           public_events = as.Date(public_events, "%d/%m/%y"),
+           lockdown = as.Date(lockdown, "%d/%m/%y"),
+           social_distancing_encouraged = as.Date(social_distancing_encouraged, "%d/%m/%y"),
+           self_isolating_if_ill = as.Date(self_isolating_if_ill, "%d/%m/%y")) %>%
+    select("Country","schools_universities","public_events","lockdown","social_distancing_encouraged","self_isolating_if_ill")
+  
+  return(covariates)  
 }

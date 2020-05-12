@@ -30,6 +30,7 @@ make_plots_all <- function(filename, SIM=FALSE, label = "", last_date_data, ext 
                                      out = out, SIM = SIM)
     # Cuts data on last_data_date
     data_country_plot <- data_country_plot[which(data_country_plot$date <= last_date_data),]
+    
     # Read in covariates
 
     covariates_long <- gather(covariates[which(covariates$Country == countries[i]), 
