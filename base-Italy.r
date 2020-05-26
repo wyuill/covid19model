@@ -83,7 +83,6 @@ mobility<-read_google_mobility()
 interventions <- read_interventions()
 #interventions<-interventions[which(interventions$Country!="Italy"),]
 
-
 # ENSURE ALL AREAS PRESENT FOR ALL VARIABLES
 d <- d %>% filter(country %in% ifr.by.country$country & country %in% mobility$country & 
                     country %in% interventions$Country)
@@ -96,6 +95,9 @@ mobility <- mobility %>% filter(country %in% ifr.by.country$country & country %i
 
 interventions <- interventions %>% filter(Country %in% ifr.by.country$country & Country %in% d$country & 
                                             Country %in% mobility$country)
+
+d <- d %>% filter(country %in% ifr.by.country$country & country %in% mobility$country & 
+                    country %in% interventions$Country)
 
 regions<-unique(as.factor(d$country))
 
@@ -113,7 +115,7 @@ regions_sum$deathsPer1000 <- signif(regions_sum$deathsPer1000*1000,2)
 
 top_7 <- regions_sum[1:7,]
 
-forecast <- 60 # increaseto get correct number of days to simulate
+forecast <- 64 # increaseto get correct number of days to simulate
 # Maximum number of days to simulate
 N2 <- (max(d$DateRep) - min(d$DateRep) + 1 + forecast)[[1]]
 
@@ -130,6 +132,8 @@ reported_cases <- processed_data$reported_cases
 options(mc.cores = parallel::detectCores())
 rstan_options(auto_write = TRUE)
 m = stan_model(paste0('Italy/code/stan-models/',StanModel,'.stan'))
+
+# speed improvement? https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started
 
 if(DEBUG) {
   fit = sampling(m,data=stan_data,iter=40,warmup=20,chains=2)
@@ -153,7 +157,6 @@ filename <- paste0(StanModel,'-',JOBID)
 
 regions <- unique(d$country)
 
-
 # This is a hack to get it to save
 states = regions
 
@@ -161,14 +164,14 @@ covariate_data = list(interventions, mobility)
 
 save(fit, dates, reported_cases, reported_deaths, regions, states, JOBID ,
      estimated_cases_raw, estimated_deaths_raw, estimated_deaths_cf, stan_data, covariate_data,
-     file=paste0('Italy/results/',StanModel,'-',JOBID,'-stanfit.Rdata'))
+     file=paste0('Italy/results/', StanModel,'-',JOBID,'-stanfit.Rdata'))
 
 source("Italy/code/plotting/make-plots.r")
 make_plots_all(paste0('Italy/results/', StanModel, '-', JOBID, '-stanfit.Rdata'), 
                last_date_data = max(dates[[1]]))
 source("Italy/code/utils/make-table.r")
 # Prints attackrates to console
-make_table(paste0('Italy/results/', StanModel, '-', JOBID, '-stanfit.Rdata'), 
+make_table(paste0('Italy/', StanModel, '-', JOBID, '-stanfit.Rdata'), 
            date_till_percentage = max(dates[[1]]))
 
 # code for scenarios runs only in full mode
@@ -211,24 +214,24 @@ if (FULL){
   
   
   source("Italy/code/plotting/make-scenario-plots-top7.r")
-  
-  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast, 
-                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE, 
+
+  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast,
+                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE,
                                           mobility_increase = 20,top=7)
-  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast, 
-                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE, 
+  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast,
+                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE,
                                           mobility_increase = 40,top=7)
-  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast, 
-                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE, 
+  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast,
+                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE,
                                           mobility_increase = 20,top=8)
-  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast, 
-                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE, 
+  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast,
+                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE,
                                           mobility_increase = 40,top=8)
-  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast, 
-                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE, 
+  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast,
+                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE,
                                           mobility_increase = 20,top=9)
-  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast, 
-                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE, 
+  make_scenario_comparison_plots_mobility(JOBID = JOBID, StanModel, len_forecast = len_forecast,
+                                          last_date_data = max(dates[[1]]) + len_forecast, baseline = FALSE,
                                           mobility_increase = 40,top=9)
 }
 

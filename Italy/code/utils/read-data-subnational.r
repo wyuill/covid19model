@@ -156,13 +156,12 @@ read_ifr_data <- function(region){
   cases_raw <- read.csv("Italy/data/uk_cases.csv", stringsAsFactors = FALSE)
   areas <- select(cases_raw, Area.code, Area.name) %>% distinct()
   
-  ifr.Italy.regional <- left_join(areas, ifr) %>%
-    left_join(., pop, by=c("Area.code"="X")) %>%
-    distinct() %>%
+  ifr.Italy.regional <- areas %>%
+    left_join(pop, by=c("Area.code"="X")) %>%
     mutate(country = paste(Area.code, "-", Area.name),
            X = row_number(),
-           ifr = ifr,
-           popt = X2018) %>%
+           ifr = ifr$ifr,
+           popt = X2019) %>%
     select(country, X, ifr, popt)
   
   return(ifr.Italy.regional)
@@ -228,20 +227,20 @@ read_google_mobility <- function(){
   
   mobility <- google_mobility
   
-  cases_raw <- read.csv("Italy/data/uk_cases.csv", stringsAsFactors = FALSE)
-  areas <- select(cases_raw, Area.code, Area.name) %>% distinct()
+  mobility_matching <- read.csv("Italy/data/google_ons_lookup.csv", stringsAsFactors = FALSE) %>%
+    filter(!is.na(ONS.Code))
   
-  mobility <- left_join(areas, mobility, by=c("Area.name"="country")) %>%
-    mutate(country = paste(Area.code, "-", Area.name)) %>%
+  mobility <- inner_join(mobility_matching, mobility, by=c("Google"="country")) %>%
+    mutate(country = paste(ONS.Code, "-", ONS)) %>%
     select("country","date","grocery.pharmacy","parks","residential","retail.recreation","transitstations","workplace")
   
   # remove areas with nas - May not need this as real issue is covariate_list is different lengths per area
-  # Not needed - see mobility1<-na.locf(mobility1) in process-covariates_italy.r
+  # however if fully blank or very blank issues with imputing so set a limit of <30 NA for now
   area_without_na <- mobility %>%
     group_by(country) %>%
     summarise_all(~sum(is.na(.))) %>%
     transmute(country, sumNA = rowSums(.[-1])) %>%
-    filter(sumNA == 0)
+    filter(sumNA < 30)
   
   mobility <- mobility %>%
     filter(country %in% area_without_na$country)

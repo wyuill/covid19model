@@ -101,11 +101,11 @@ make_three_panel_plots <- function(data_country, covariates_long,
     theme(legend.position="right")
   
   p <- plot_grid(p1, p2, p3, ncol = 3, rel_widths = c(1, 1, 2))
-  save_plot(filename = paste0("Italy//figures/", country, "-three-panel-", label, "-", jobid, ".png"), 
+  save_plot(filename = paste0("Italy/figures/",  jobid, '/', country, "-three-panel-", label, "-", jobid, ".png"), 
             p, base_width = 14)
   
   # EXPORT MODEL RESULTS
-  write.csv(data_country, paste0("Italy//figures/", country, "-three-panel-", label, "-", jobid, ".csv"))
+  write.csv(data_country, paste0("Italy/figures/",  jobid, '/', country, "-three-panel-", label, "-", jobid, ".csv"))
   
   return (p)
 }
